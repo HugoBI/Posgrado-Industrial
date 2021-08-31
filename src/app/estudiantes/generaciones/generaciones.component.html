@@ -1,0 +1,38 @@
+<div class="container">
+    <h4 class="text-center">Maestría en Ingeniería Industrial (MII)</h4>
+    <div class="row">
+        <div class="col">
+            <h4 class="text-center">Generaciones</h4>
+            <div class="toolbar">
+                <select class="select-css ml-auto" [(ngModel)]="selectGeneracion.id" (change)="onSelect($event.target.value)">
+                  <option *ngFor="let generacion of numGeneraciones" value="{{generacion.id}}">
+                    {{generacion.name}}
+                  </option>
+                </select>
+            </div>
+            <table class="table table-striped table-bordered row-border hover">
+                <thead>
+                    <tr>
+                        <th scope="col">No. de Control</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Director</th>
+                        <th scope="col">Tutor</th>
+                        <th scope="col">Tesis</th>
+                    </tr>
+                </thead>
+                <tbody *ngFor="let data of dataGen">
+                    <tr>
+                        <th scope="row">{{ data.id }}</th>
+                        <td> {{ data.nombre }} </td>
+                        <td> {{ data.director }} </td>
+                        <td> {{ data.tutor }} </td>
+                        <!-- <td><button *ngIf="data.tesis" class="btn btn-primary"> {{ data.tesis }} </button></td> -->
+                        <td> {{ data.tesis }} </td>
+
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

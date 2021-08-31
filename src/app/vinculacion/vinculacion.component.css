@@ -1,0 +1,21 @@
+.container {
+    padding: 20px 20px 20px 20px;
+    background-color: #ffffff;
+    box-shadow: 0px 15px 15px -8px rgba(0, 0, 0, 0.5)
+}
+
+.container .row p {
+    font-size: 20px;
+    text-align: justify;
+}
+
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 2px;
+}
